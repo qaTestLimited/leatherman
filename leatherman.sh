@@ -4,7 +4,10 @@
 # Leatherman - multitool for rapid node, postgres, git deployments and maintenance #
 ####################################################################################
 
-source ./settings.sh
+if [ -f "leatherman.sh" ]
+then
+	source ./settings.sh
+fi
 
 ME="${0##*/}"
 
