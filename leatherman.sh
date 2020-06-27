@@ -8,10 +8,18 @@ source ./settings.sh
 
 ME="${0##*/}"
 
-echo -e "\n\x1B[101m ${PRODUCT}, version ${VERSION} \x1B[49m\n"
-
 command=$1
 subcommand=$2
+
+if [[ "${command}" == "" || "${command}" == "bootstrap" ]]
+then
+	if [ -f "leatherman.sh" ]
+	then
+		echo -e "\n\x1B[101m ${PRODUCT}, version ${VERSION} \x1B[49m\n"
+	else
+		command="bootstrap"
+	fi
+fi
 
 #get current folder (this is the programatics installation path)
 installdir=$(pwd -P)
