@@ -4,7 +4,7 @@
 # Leatherman - multitool for rapid node, postgres, git deployments and maintenance #
 ####################################################################################
 
-if [ -f "settings.sh" ]
+if [ -f "leatherman.sh" ]
 then
 	source ./settings.sh
 fi
@@ -280,6 +280,8 @@ installation
 	exit 0
 	;;
 bootstrap )
+	target=$3
+	echo "Bootstrapping files to ${target}"
 	mkdir installation
 	cd installation
 	git clone https://github.com/qaTestLimited/Leatherman.git .
