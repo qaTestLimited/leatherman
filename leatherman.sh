@@ -280,7 +280,7 @@ installation
 	exit 0
 	;;
 bootstrap )
-	target=$3
+	target=$2
 	echo "Bootstrapping files to ${target}"
 	mkdir installation
 	cd installation
