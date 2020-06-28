@@ -282,6 +282,7 @@ installation
 bootstrap )
 	target=$2
 	echo "Bootstrapping files to ${target}"
+	cd ${target}
 	mkdir installation
 	cd installation
 	git clone https://github.com/qaTestLimited/Leatherman.git .
