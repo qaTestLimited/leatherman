@@ -286,6 +286,9 @@ bootstrap )
 	mkdir installation
 	cd installation
 	git clone https://github.com/qaTestLimited/Leatherman.git .
+	nano settings.sh
+	cd ..
+	installation/leatherman.sh install
 	echo node_modules/ >.gitignore
 	exit 0
 	;;
