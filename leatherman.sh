@@ -286,6 +286,7 @@ bootstrap )
 	mkdir installation
 	cd installation
 	git clone https://github.com/qaTestLimited/Leatherman.git .
+	chmod +x *.sh
 	exit 0
 	;;
 configure )
