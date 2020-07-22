@@ -97,7 +97,7 @@ cluster
 function ${SHORTCUT}
 {
 cd ${installdir}
-./${ME} \"$@\"
+./${ME} \"\$@\"
 } 
 #end_${PRODUCT}" >.bash_profile.add
 		cat .bash_profile .bash_profile.add > .bash_profile
