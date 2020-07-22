@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 ####################################################################################
 # Leatherman - multitool for rapid node, postgres, git deployments and maintenance #
 ####################################################################################
@@ -286,7 +288,30 @@ bootstrap )
 	mkdir installation
 	cd installation
 	git clone https://github.com/qaTestLimited/Leatherman.git .
+	read -p 'Product name [i.e. MyWebApp]: ', product
+	read -p 'Commmand line shortcut [i.e. mwa]: ', shortcut
+	read -p 'Version [i.e. 1.0]: ', version
+	read -p 'Git repository [i.e. https://github.com/myGitHubID/MyWebApp.git]: ', gitrepo
+	read -p 'POSTGRES user id [i.e. POSTGRES]: ', postgres_user
+	read -p 'POSTGRES password [i.e. password]: ', postgres_pswd
+	read -p 'Retry timeout to wait for POSTGRES to start (in seconds) [i.e. 30]: ', retries
+	read -p 'Web application data base name [i.e. MyDB]: ', dbname
+	read -p 'Web application data base user [i.e. MyDBUser]: ', dbuser
+	read -p 'Web application data base user password [i.e. MyDBpwsd]: ', dbpswd
+
+echo "PRODUCT=${product}
+SHORTCUT=${shortcut}
+VERSION=${version}
+GITREPO=${gitrepo}
+POSTGRES_USER=${postgres_user}
+POSTGRES_PSWD=${postgres_pswd}
+RETRIES=${retries}
+DBNAME=${dbname}
+DBUSER=${dbuser}
+DBPSWD=${pbpswd}" >settings.sh
+
 	chmod +x *.sh
+	./leadtherman.sh install all
 	exit 0
 	;;
 configure )
