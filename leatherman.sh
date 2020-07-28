@@ -311,7 +311,7 @@ DBUSER=${dbuser}
 DBPSWD=${pbpswd}" >settings.sh
 
 	chmod +x *.sh
-	./leadtherman.sh install all
+	./leatherman.sh install all
 	exit 0
 	;;
 configure )
