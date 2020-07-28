@@ -288,7 +288,8 @@ bootstrap )
 	mkdir installation
 	cd installation
 	git clone https://github.com/qaTestLimited/Leatherman.git .
-	read -p 'Product name [i.e. MyWebApp]: ' product
+	echo -n 'Product name [i.e. MyWebApp]: '
+	read product
 	read -p 'Commmand line shortcut [i.e. mwa]: ' shortcut
 	read -p 'Version [i.e. 1.0]: ' version
 	read -p 'Git repository [i.e. https://github.com/myGitHubID/MyWebApp.git]: ' gitrepo
