@@ -289,7 +289,17 @@ bootstrap )
 	cd installation
 	git clone https://github.com/qaTestLimited/Leatherman.git .
 	chmod +x *.sh
-	./leatherman.sh configure
+	read -p 'Configure leatherman instance(Y/n)? ' yn
+	if [[ $yn == Y ]] 
+	then
+		./leatherman.sh configure
+		read -p 'Install configured leatherman instance (Y/n)? ' yn
+		if [[ $yn == Y ]] 
+		then
+			./leatherman.sh install all
+		fi
+	fi
+	
 	exit 0
 	;;
 configure )
