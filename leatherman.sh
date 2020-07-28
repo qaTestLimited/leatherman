@@ -103,7 +103,7 @@ cd ${installdir}
 } 
 #end_${PRODUCT}" >.bash_profile.add
 		cat .bash_profile .bash_profile.add > .bash_profile
-
+		~/.bash_profile
 		#.bash_profile.bak will contain a previous version, just in case anything went wrong
 	fi
 
