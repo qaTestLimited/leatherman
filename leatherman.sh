@@ -125,7 +125,7 @@ cd ${installdir}
 		else
 			echo postgres is installed, updating... 
 			brew upgrade postgres
-			brew postgresql-upgrade-database
+			brew postgresql-upgrade-database || true
 		fi
 
 		echo "Starting postgres services..."
@@ -152,7 +152,7 @@ cd ${installdir}
 		echo Installing webapp...
 		cd ..
 		rm -rf  "${pgmdir}"
-        	mkdir "${pgmdir}"
+		mkdir "${pgmdir}"
 		cd "${pgmdir}"
 		git clone ${GITREPO} .
 		echo node_modules/ >.gitignore
