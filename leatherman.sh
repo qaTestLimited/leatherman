@@ -152,7 +152,7 @@ cd ${installdir}
 		echo Installing webapp...
 		cd ..
 		rm -rf  "${pgmdir}"
-        mkdir "${pgmdir}"
+        	mkdir "${pgmdir}"
 		cd "${pgmdir}"
 		git clone ${GITREPO} .
 		echo node_modules/ >.gitignore
