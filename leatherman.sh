@@ -150,10 +150,8 @@ cd ${installdir}
 	if [[ $webapp == 1 ]]
 	then
 		echo Installing webapp...
-
-		cd "${pgmdir}"
 		cd ..
-		rm -r "${pgmdir}"
+		rm -rf  "${pgmdir}"
         mkdir "${pgmdir}"
 		cd "${pgmdir}"
 		git clone ${GITREPO} .
