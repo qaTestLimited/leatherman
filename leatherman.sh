@@ -112,7 +112,7 @@ cd ${installdir}
 		which -s brew
 		if [[ $? != 0 ]] ; then
 			echo Installing brew... 
-			CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+			sudo CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 		else
 			echo brew is installed, updating... 
 			brew update
