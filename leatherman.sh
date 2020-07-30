@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -e
+set -e
 
 ####################################################################################
 # Leatherman - multitool for rapid node, postgres, git deployments and maintenance #
@@ -103,7 +103,7 @@ cd ${installdir}
 } 
 #end_${PRODUCT}" >.bash_profile.add
 		cat .bash_profile .bash_profile.add > .bash_profile
-		~/.bash_profile
+		. ~/.bash_profile
 		#.bash_profile.bak will contain a previous version, just in case anything went wrong
 	fi
 
@@ -290,11 +290,11 @@ bootstrap )
 	git clone https://github.com/qaTestLimited/Leatherman.git .
 	chmod +x *.sh
 	read -p 'Configure leatherman instance(Y/n)? ' yn
-	if [[ $yn == Y ]] 
+	if [[ $yn == [Yy] ]] 
 	then
 		./leatherman.sh configure
 		read -p 'Install configured leatherman instance (Y/n)? ' yn
-		if [[ $yn == Y ]] 
+		if [[ $yn == [Yy] ]] 
 		then
 			./leatherman.sh install all
 		fi
