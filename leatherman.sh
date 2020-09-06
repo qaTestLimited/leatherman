@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -e
+# set -e
 
 ####################################################################################
 # Leatherman - multitool for rapid node, postgres, git deployments and maintenance #
