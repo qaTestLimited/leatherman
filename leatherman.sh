@@ -294,6 +294,7 @@ bootstrap )
 		read -p 'Install configured leatherman instance (Y/n)? ' yn
 		if [[ $yn == [Yy] ]] 
 		then
+			echo installing leatherman
 			./leatherman.sh install all
 		fi
 	fi
