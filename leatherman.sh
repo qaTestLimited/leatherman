@@ -296,6 +296,7 @@ bootstrap )
 		then
 			echo installing leatherman
 			./leatherman.sh install all
+			echo after installing leatherman
 		fi
 	fi
 	
